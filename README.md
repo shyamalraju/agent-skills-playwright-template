@@ -29,24 +29,14 @@ npm run app:start
 In another terminal, run the Playwright tests:
 
 ```sh
-npm test
-```
-
-You can also open the Playwright UI:
-
-```sh
-npm run test:ui
-```
-
-Or run tests headed:
-
-```sh
-npm run test:headed
+npx playwright test
 ```
 
 ## Example Agent Commands
 
 These examples assume you have the app running with `npm run app:start`.
+
+The checkout flow is the recommended generation exercise. Some checkout page object methods and checkout tests have been intentionally omitted so you can test how well the agent generates the missing framework code.
 
 Generate a new test with Codex:
 
@@ -100,7 +90,7 @@ The skill is intentionally opinionated. It prefers readable tests, small page ob
 │   └── skills/
 │       └── playwright-skills/   # Local agent skill for Playwright work
 │           └── references/      # Skill docs for planning, generation, repair, and shared workflows
-├── package.json                 # Root scripts for installing, starting, and testing
+├── package.json                 # Root dependencies and app helper scripts
 └── playwright.config.ts         # Playwright config for running against the local app
 ```
 

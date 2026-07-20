@@ -4,11 +4,8 @@
   "description": "Experimental scaffold for agent-orchestrated Playwright test automation.",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
     "app:install": "npm install --prefix app",
-    "app:start": "npm start --prefix app -- --host 127.0.0.1",
-    "test:ui": "playwright test --ui",
-    "test:headed": "playwright test --headed"
+    "app:start": "npm start --prefix app -- --host 127.0.0.1"
   },
   "keywords": [],
   "author": "",
