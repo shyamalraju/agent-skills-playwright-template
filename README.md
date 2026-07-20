@@ -11,7 +11,7 @@ The skills are adapted from the Playwright CLI skills, but shaped around this re
 Install the root dependencies:
 
 ```sh
-npm install
+npm install && npx playwright install
 ```
 
 Install the sample app dependencies:
@@ -38,28 +38,37 @@ These examples assume you have the app running with `npm run app:start`.
 
 The checkout flow is the recommended generation exercise. Some checkout page object methods and checkout tests have been intentionally omitted so you can test how well the agent generates the missing framework code.
 
-Generate a new test with Codex:
+Prompt:
 
-```sh
-codex "Create a Playwright test for adding a backpack to the cart. Use the existing page object model and run the test."
+```text
+Please create a playwright test using our playwright-skills. The test should:
+i) login as a valid standard user
+ii) add a backpack item to the cart
+iii) Click on cart icon and enter the user details to checkout
+iv) Finalise the checkout
+v) Confirm the checkout is successful
 ```
 
-Generate a new test with Claude:
+With Codex:
 
 ```sh
-claude "Create a Playwright test for adding a backpack to the cart. Use the existing page object model and run the test."
+codex "Please create a playwright test using our playwright-skills. The test should:
+i) login as a valid standard user
+ii) add a backpack item to the cart
+iii) Click on cart icon and enter the user details to checkout
+iv) Finalise the checkout
+v) Confirm the checkout is successful"
 ```
 
-Repair a failing test with Codex:
+With Claude:
 
 ```sh
-codex "Run the Playwright tests, inspect any failure, and repair the test using the existing page object model."
-```
-
-Repair a failing test with Claude:
-
-```sh
-claude "Run the Playwright tests, inspect any failure, and repair the test using the existing page object model."
+claude "Please create a playwright test using our playwright-skills. The test should:
+i) login as a valid standard user
+ii) add a backpack item to the cart
+iii) Click on cart icon and enter the user details to checkout
+iv) Finalise the checkout
+v) Confirm the checkout is successful"
 ```
 
 ## Agent Skill And Framework Conventions
@@ -117,8 +126,12 @@ A typical generate flow looks like this:
 Example prompt:
 
 ```text
-Create a Playwright test for adding a backpack to the cart and checking out.
-Use the existing page object model.
+Please create a playwright test using our playwright-skills. The test should:
+i) login as a valid standard user
+ii) add a backpack item to the cart
+iii) Click on cart icon and enter the user details to checkout
+iv) Finalise the checkout
+v) Confirm the checkout is successful
 ```
 
 ## Current Status
