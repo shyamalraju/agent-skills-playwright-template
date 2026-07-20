@@ -1,0 +1,20 @@
+{
+  "name": "agent-orchestrated-test-automation",
+  "version": "1.0.0",
+  "description": "Experimental scaffold for agent-orchestrated Playwright test automation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "app:install": "npm install --prefix app",
+    "app:start": "npm start --prefix app -- --host 127.0.0.1",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  },
+  "private": true
+}
