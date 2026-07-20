@@ -1,6 +1,6 @@
-# Agent Skills Playwright Template
+# Agent Skills Example For Playwright
 
-A working draft template for QA engineers building a Playwright automation framework with an agent harness.
+A working draft example for QA engineers using agent skills to generate Playwright tests.
 
 It includes a sample app, root-level Playwright tests, page object models, and local agent skills for planning, generating, running, debugging, and repairing tests.
 
@@ -62,11 +62,11 @@ Repair a failing test with Claude:
 claude "Run the Playwright tests, inspect any failure, and repair the test using the existing page object model."
 ```
 
-## How The Agent Harness Works
+## Agent Skill And Framework Conventions
 
-The local skill gives the agent repo-specific instructions for Playwright work.
+The local skill gives the agent repo-specific instructions for Playwright work. It is intentionally opinionated, so generated tests follow the same framework conventions each time.
 
-It tells the agent how to:
+The skill tells the agent how to:
 
 - inspect the live app before writing tests
 - choose stable user-facing locators
@@ -75,7 +75,14 @@ It tells the agent how to:
 - run the generated test
 - debug and repair failures
 
-The skill is intentionally opinionated. It prefers readable tests, small page object methods, Playwright web-first assertions, and locator validation against the running app.
+The framework prefers:
+
+- page objects under `tests/pages/`
+- specs under `tests/`
+- `getByRole`, `getByLabel`, `getByText`, and other user-facing locators
+- Playwright web-first assertions like `toBeVisible`, `toHaveText`, and `toHaveURL`
+- clear test steps that describe the user journey
+- no fixed sleeps or brittle selectors unless there is a strong reason
 
 ## Project Structure
 
@@ -113,17 +120,6 @@ Example prompt:
 Create a Playwright test for adding a backpack to the cart and checking out.
 Use the existing page object model.
 ```
-
-## Framework Conventions
-
-The template prefers:
-
-- page objects under `tests/pages/`
-- specs under `tests/`
-- `getByRole`, `getByLabel`, `getByText`, and other user-facing locators
-- Playwright web-first assertions like `toBeVisible`, `toHaveText`, and `toHaveURL`
-- clear test steps that describe the user journey
-- no fixed sleeps or brittle selectors unless there is a strong reason
 
 ## Current Status
 

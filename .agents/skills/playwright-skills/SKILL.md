@@ -7,7 +7,7 @@ description: Plan, generate, maintain, and repair Playwright tests in this repo 
 
 Use this skill for Playwright test planning, generation, maintenance, and repair in this repo.
 
-This is the repo-preferred Playwright skill. It combines Playwright CLI command mechanics with this project's page object, locator validation, and repair practices. The separate `playwright-cli` skill remains available during consolidation as installed source material for CLI command details.
+This is the repo-preferred Playwright skill. It combines Playwright CLI command mechanics with this project's page object, locator validation, and repair practices. CLI command details are vendored into this skill under `references/shared/cli-command-reference.md`.
 
 ## Repository Scope
 
