@@ -4,7 +4,7 @@ A working draft example for QA engineers using agent skills to generate Playwrig
 
 It includes a sample app, root-level Playwright tests, page object models, and local agent skills for planning, generating, running, debugging, and repairing tests.
 
-The skills are adapted from the Playwright CLI skills, but shaped around this repo's opinionated framework conventions. The repo is currently optimised for the generate component first.
+The skills are adapted from the Playwright CLI skills, but shaped around this repo's opinionated framework and conventions. The repo is currently optimised for the generate component first.
 
 ## Getting Started
 
